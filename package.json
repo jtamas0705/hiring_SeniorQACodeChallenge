@@ -1,0 +1,14 @@
+{
+  "name": "hiring_SeniorQACodeChallenge",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "yarn cypress run source",
+    "cypress:open": "yarn cypress open"
+  },
+  "repository": "https://github.com/jtamas0705/hiring_SeniorQACodeChallenge.git",
+  "license": "MIT",
+  "dependencies": {
+    "@cucumber/cucumber": "^11.2.0",
+    "cypress": "^14.1.0"
+  }
+}
