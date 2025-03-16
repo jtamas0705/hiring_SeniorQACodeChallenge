@@ -12,12 +12,12 @@ module.exports = defineConfig({
 
     cucumberJson: {
       generate: true,
-      outputFolder: "source/cypress/reports/cucumber-json"
+      outputFolder: "reports/cucumber-html"
     },
 
     fixturesFolder: "source/cypress/fixtures",
-    supportFile: false,
-    stepDefinitions: "source/cypress/support/step_definitions/",
+    supportFile: "source/cypress/support/e2e.js",
+    stepDefinitions: "source/cypress/step_definitions/",
     baseUrl: 'https://magento.softwaretestingboard.com',
     specPattern: "source/cypress/e2e/**/*.feature",
     chromeWebSecurity: false,
@@ -28,8 +28,8 @@ module.exports = defineConfig({
     "nonGlobalStepDefinitions": false,
     "json": {
       "enabled": true,
-      "formatter": "source/support/cucumber-json-formatter",
-      "output": "source/cypress/reports/report.json"
+      "formatter": "source/cypress/support/cucumber-json-formatter",
+      "output": "reports/cucumber-json"
    }
   }
 })
