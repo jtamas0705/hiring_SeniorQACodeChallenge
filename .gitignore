@@ -1,2 +1,5 @@
 node_modules/
 source/cypress/screenshots
+reports/
+multi-reporter-config.json
+runner-results
