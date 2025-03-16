@@ -1,0 +1,36 @@
+{
+  "name": "SeniorQACodeChallenge",
+  "version": "1.0.0",
+  "scripts": {
+    "cucumber:open:chrome": "cypress open --browser chrome --e2e",
+    "cucumber:run:chrome": "cypress run --browser chrome --e2e",
+    "cucumber:open:firefox": "cypress open --browser firefox --e2e",
+    "cucumber:run:firefox": "cypress run --browser firefox --e2e",
+    "cypress:parallel:chrome": "cypress-parallel -s cucumber:run:chrome -d 'source/cypress/e2e/**/*.feature' -t 3 -o 'cypressParallel=true'",
+    "cypress:parallel:firefox": "cypress-parallel -s cucumber:run:firefox -d 'source/cypress/e2e/**/*.feature' -t 3 -o 'cypressParallel=true'",
+    "generate-report": "node source/cypress/support/generateReport.js",
+    "execute:report:chrome": "cypress run --browser chrome --e2e && yarn generate-report"
+  },
+  "repository": "https://github.com/jtamas0705/hiring_SeniorQACodeChallenge.git",
+  "license": "MIT",
+  "dependencies": {
+    "cypress-multi-reporters": "^2.0.5"
+  },
+  "devDependencies": {
+    "cypress": "^14.2.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-parallel": "^0.14.0",
+    "moment": "^2.30.1",
+    "multiple-cucumber-html-reporter": "^3.9.2"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "stepDefinitions": "source/cypress/step_definitions/",
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "reports/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  }
+}
