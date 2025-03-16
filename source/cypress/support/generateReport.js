@@ -5,8 +5,8 @@ const executionStartTime = moment().format('MMMM Do YYYY, h:mm:ss A');
 const executionEndTime = moment().add(30, 'minutes').format('MMMM Do YYYY, h:mm:ss A');
 
 report.generate({
- jsonDir: 'source/cypress/reports/cucumber-json',// Path of cucumber json file
- reportPath: 'source/cypress/reports/cucumber-html',//path of required report
+ jsonDir: 'reports/cucumber-json',// Path of cucumber json file
+ reportPath: 'reports/cucumber-html',//path of required report
     reportTitle: 'Latest Execution',
     overwrite: true,
  metadata:{
