@@ -16,7 +16,7 @@ module.exports = defineConfig({
     },
 
     fixturesFolder: "source/cypress/fixtures",
-    supportFile: "source/cypress/support/e2e.js",
+    supportFile: false,
     stepDefinitions: "source/cypress/step_definitions/",
     baseUrl: 'https://magento.softwaretestingboard.com',
     specPattern: "source/cypress/e2e/**/*.feature",
