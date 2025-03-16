@@ -1,3 +1,3 @@
 Feature: Open page validation
 Scenario: Home Page
-  Given Visit Page "https://magento.softwaretestingboard.com/"
+  Given Go to page "https://example.cypress.io"
